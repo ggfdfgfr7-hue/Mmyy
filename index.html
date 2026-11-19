@@ -1,38 +1,21 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>الفريمات</title>
-  <link rel="preconnect" href="https://lltrco.com">
-  <style>
-    *{box-sizing:border-box;margin:0}
-    body{padding:8px;background:#111}
-    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
-    iframe{width:100%;height:50vh;border:0;border-radius:8px;background:#fff}
-    @media(max-width:600px){.grid{grid-template-columns:1fr}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page 1</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#080e1c}
+.frames{display:grid;grid-template-columns:1fr;gap:8px;padding:8px}
+iframe{width:100%;height:600px;border:0;background:white}
+</style>
 </head>
 <body>
-  <div class="grid" id="grid"></div>
-
-  <script>
-    var BASE = "https://lltrco.com/?r=";
-    var NOW  = ["mahmoudyoussef20", "mahmoudyoussef2024", "mmyy1", "mmyy11"];
-    var LATER = ["mmyy2", "mmyy4", "mmyy5"];
-    var DELAY = 5000;
-
-    var grid = document.getElementById("grid");
-
-    function add(code) {
-      var f = document.createElement("iframe");
-      f.src = BASE + code;
-      f.loading = "eager";
-      grid.appendChild(f);
-    }
-
-    NOW.forEach(add);
-    setTimeout(function () { LATER.forEach(add); }, DELAY);
-  </script>
+<div class="frames">
+<iframe src="https://lltrco.com/?r=mahmoudyoussef20"></iframe>
+<iframe src="https://lltrco.com/?r=mahmoudyoussef2024"></iframe>
+<iframe src="https://lltrco.com/?r=mmyy1"></iframe>
+</div>
 </body>
 </html>
